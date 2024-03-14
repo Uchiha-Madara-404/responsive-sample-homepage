@@ -1,0 +1,52 @@
+.body
+{
+    width: 1280px;
+    margin: 0 auto;
+    /* To center anything in css use this  */
+    border: 2px solid red;
+}
+.nav
+{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    margin-top: 10px; 
+}
+.navbar
+{
+    display: flex;
+    gap: 50px;
+}
+/* Style for toogle button */
+label{
+    width: 70px;
+    height: 40px;
+    display: block;
+    background-color: #111729;
+    background-image: url(Images/Moon_fill_light.svg);
+    background-position:left; 
+    background-repeat: no-repeat;
+    border-radius: 100px;
+    cursor: pointer;
+    position: relative;
+}
+input[type="checkbox"]{
+    display: none;
+}
+.moving_circle{
+    position: absolute;
+    left: 0px;
+    width: 30px;
+    height: 30px;
+    background-color: #F2F9FE;
+    background-image: url(Images/Sun_fill.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 100px;
+    margin: 5px;
+    transition: 0.1s;
+}
+input[type="checkbox"]:checked + .moving_circle{
+    transform: translateX(30px);
+    /* box-shadow: 0px 0px 40px 20px #fff; */
+}
